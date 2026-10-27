@@ -62,7 +62,13 @@ export default function Contact() {
                 <label htmlFor="ms">Message *</label>
                 <textarea id="ms" name="message" required />
               </div>
-              <input className="hp" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+              <input
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ display: 'none' }}
+              />
               <button className="btn" type="submit" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending…' : 'Submit'}
               </button>
